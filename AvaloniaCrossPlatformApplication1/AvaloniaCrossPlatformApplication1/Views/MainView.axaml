@@ -1,0 +1,59 @@
+﻿<UserControl
+    x:Class="AvaloniaCrossPlatformApplication1.Views.MainView"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModels="clr-namespace:AvaloniaCrossPlatformApplication1.ViewModels"
+    xmlns:views="clr-namespace:AvaloniaCrossPlatformApplication1.Views"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    Background="#171C2C"
+    mc:Ignorable="d">
+    <Design.DataContext>
+        <viewModels:MainViewModel />
+    </Design.DataContext>
+
+    <DockPanel>
+        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
+            <Button
+                Margin="4"
+                Command="{Binding AddItemsCommand}"
+                Content="Add Items" />
+            <Button
+                Margin="4"
+                Command="{Binding RemoveItemsCommand}"
+                Content="Remove Items" />
+        </StackPanel>
+
+        <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled">
+            <ItemsRepeater Items="{Binding Items}">
+                <ItemsRepeater.Layout>
+                    <UniformGridLayout MinItemWidth="60" Orientation="Vertical" />
+                </ItemsRepeater.Layout>
+
+                <ItemsRepeater.ItemTemplate>
+                    <views:DataTemplateSelector>
+                        <views:DataTemplateSelector.Under100DataTemplate>
+                            <DataTemplate DataType="viewModels:DataViewModel">
+                                <TextBlock
+                                    Width="60"
+                                    Foreground="Red"
+                                    Text="{Binding Index}" />
+                            </DataTemplate>
+                        </views:DataTemplateSelector.Under100DataTemplate>
+
+                        <views:DataTemplateSelector.Over100DataTemplate>
+                            <DataTemplate DataType="viewModels:DataViewModel">
+                                <TextBlock
+                                    Width="60"
+                                    Foreground="Green"
+                                    Text="{Binding Index}" />
+                            </DataTemplate>
+                        </views:DataTemplateSelector.Over100DataTemplate>
+                    </views:DataTemplateSelector>
+                </ItemsRepeater.ItemTemplate>
+            </ItemsRepeater>
+        </ScrollViewer>
+    </DockPanel>
+</UserControl>

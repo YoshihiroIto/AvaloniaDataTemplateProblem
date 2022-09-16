@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AvaloniaCrossPlatformApplication1", "AvaloniaCrossPlatformApplication1\AvaloniaCrossPlatformApplication1\AvaloniaCrossPlatformApplication1.csproj", "{012E6D45-D85C-4AE8-A76E-D7B4BF24E2C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AvaloniaCrossPlatformApplication1.Desktop", "AvaloniaCrossPlatformApplication1\AvaloniaCrossPlatformApplication1.Desktop\AvaloniaCrossPlatformApplication1.Desktop.csproj", "{13DCC876-271C-4BA7-803B-00B522A86E61}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{012E6D45-D85C-4AE8-A76E-D7B4BF24E2C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{012E6D45-D85C-4AE8-A76E-D7B4BF24E2C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{012E6D45-D85C-4AE8-A76E-D7B4BF24E2C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{012E6D45-D85C-4AE8-A76E-D7B4BF24E2C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13DCC876-271C-4BA7-803B-00B522A86E61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13DCC876-271C-4BA7-803B-00B522A86E61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13DCC876-271C-4BA7-803B-00B522A86E61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13DCC876-271C-4BA7-803B-00B522A86E61}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
